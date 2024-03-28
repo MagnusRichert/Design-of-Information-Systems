@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    ports:
+      - "9000:8089"
+  redis:
+    image: "redis:alpine"
+
+## OLD COMMANDS:
+#docker build -t first_app:v5 .
+#docker run -d -p 8091:8089 first_app:v4
+
+## NEW COMMANDS:
+#docker compose up --build -d
